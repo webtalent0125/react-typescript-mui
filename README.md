@@ -1,44 +1,47 @@
-# Getting Started with the tech task.
+# Getting Started with Create React App
 
-Intall all of the required node module for the project
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-`npm i`
+## Available Scripts
 
-Once the packages are all installed run the following to start the project.
+In the project directory, you can run:
 
-`npm run start`
+### `npm start`
 
-This should launch the application on `http://localhost:3000`
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The documentation is for Material UI is found at `https://mui.com/`
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-The landing page was generated following this Tutorial `https://blog.appseed.us/mui-react-coding-landing-page/`
+### `npm test`
 
-Your goal, is the make this landing page interesting and unique. Flex your design skills and bring this basic page to life.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-You are welcome to include other libraries, but please, continue to use Material UI for the base styling.
+### `npm run build`
 
-Logo images are available in the `./public/` folder.
-The primary colour for the theme is `#017dc5`.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-We would encourage using atomic design principles and your will find in the stories folder
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-`atom`
-`molecules`
-`organisms`
-`pages`
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-The entry point for the application, like all react applications is `index.tsx`.
+### `npm run eject`
 
-Follow the imported modules and you'll see the basic layout is as follows.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-`index.tsx` -> `App.tsx` -> `views` -> `stories/pages` -> `organisms`
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Most of all, have fun, don't stress. Enjoy yourself.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-This is a great opportunity to learn about Typescript, React and Material UI.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-NOTE: When returning the application, DO NOT include the node_modules, please delete those when returning the tech task. Otherwise the directory will be huge, even when zipped.
-# react-typescript-mui
-# react-typescript-mui
-# react-typescript-mui
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+# react-typescript

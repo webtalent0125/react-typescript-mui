@@ -1,41 +1,37 @@
-import "./App.css";
-import CssBaseline from "@mui/material/CssBaseline";
-
-import ErrorBoundary from "./views/ErrorBoundary/ErrorBoundary";
-import { theme } from "./theme/Theme";
-import ThemeProvider from "@mui/material/styles/ThemeProvider";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { HomeView } from "./views/Pages/Home/HomeView";
-import { Route, Routes } from "react-router-dom";
-import { PricingView } from "./views/Pages/Home/PricingView";
-import { LoginView } from "./views/Pages/Authenticate/LoginView";
-import { SignUpView } from "./views/Pages/Authenticate/SignUpView";
-import { BasicLayout } from "./stories/layout/BasicLayout";
-
-const AuthenticatedRouter = () => {
-  return (
-    <Routes>
-      <Route index path="/" element={<HomeView />} />
-      <Route path="/pricing" element={<PricingView />} />
-      <Route path="/login" element={<LoginView />} />
-      <Route path="/sign-up" element={<SignUpView />} />
-    </Routes>
-  );
-};
+import React from 'react';
+import ProjectsPage from './projects/ProjectsPage';
+import ProjectPage from './projects/ProjectPage';
+import { Provider } from 'react-redux';
+import { store } from './state';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import HomePage from './home/HomePage';
+import './App.css'
 
 function App() {
   return (
-    <ErrorBoundary>
-      <ThemeProvider theme={theme}>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <CssBaseline />
-          <BasicLayout>
-            <AuthenticatedRouter />
-          </BasicLayout>
-        </LocalizationProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
+    <Provider store={store}>
+      <Router>
+        <header className="sticky">
+          <span className="logo">
+            <img src="/assets/logo-3.svg" alt="logo" width="49" height="99" />
+          </span>
+          <NavLink to="/" className="button rounded">
+            <span className="icon-home"></span>
+            Home
+          </NavLink>
+          <NavLink to="/projects" className="button rounded">
+            Projects
+          </NavLink>
+        </header>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:id" element={<ProjectPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
